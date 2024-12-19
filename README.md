@@ -4,6 +4,7 @@ Current examples:
 
 - [X] [Header](./examples/header/main.py)
 - [X] [Link](./examples/link/main.py)
+- [X] [Button](./examples/button/main.py)
 - [X] [Form](./examples/form/main.py)
     - The component relies on the [streamlit-pydantic](https://github.com/lukasmasuch/streamlit-pydantic) library.
 - [X] [Tab](./examples/tab/main.py)
