@@ -1,5 +1,6 @@
 import streamlit as st
-from src.domain.component import Component
+
+from examples.component import Component
 
 
 class Tab(Component):
