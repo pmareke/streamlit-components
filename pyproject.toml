@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "streamlit-components"
+version = "0.1.0"
+description = "Just a collection of Streamlit components using the best code practices."
+authors = ["Pedro López Mareque <pedro.lopez.mareque@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+streamlit = "^1.41.1"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.4"
+pytest-xdist = "^3.6.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
