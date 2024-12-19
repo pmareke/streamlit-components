@@ -7,7 +7,7 @@ class Tab(Component):
     def __init__(self) -> None:
         self.items: dict[str, Component] = {}
 
-    def add_tab(self, name: str, component: Component) -> None:
+    def add(self, name: str, component: Component) -> None:
         self.items[name] = component
 
     def render(self) -> None:
@@ -27,5 +27,5 @@ if __name__ == "__main__":
 
     tab = Tab()
     dummy_component = DummyComponent()
-    tab.add_tab("Dummy tab", dummy_component)
+    tab.add("Dummy tab", dummy_component)
     tab.render()
