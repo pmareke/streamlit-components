@@ -1,23 +1,28 @@
 from collections.abc import Callable
-from typing import Any
 
 import streamlit as st
 import streamlit_pydantic as sp
+from pydantic import BaseModel
 
 from examples.component import Component
 
 
 class Form(Component):
-    def __init__(self, callback: Callable, model: Any) -> None:
+    def __init__(self, callback: Callable, model: type[BaseModel]) -> None:
         self.callback = callback
         self.model = model
 
     def render(self) -> None:
-        data = sp.pydantic_form(key=__name__, model=self.model)
+        data = sp.pydantic_form(key=__name__, model=self.model)  # type: ignore
         if data:
             self.callback()
 
 
 if __name__ == "__main__":
-    form = Form(callback=lambda: st.write("Form submitted"))
+
+    class MyModel(BaseModel):  # type: ignore
+        name: str
+        age: int
+
+    form = Form(callback=lambda: st.write("Form submitted"), model=MyModel)
     form.render()

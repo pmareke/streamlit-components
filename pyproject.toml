@@ -13,6 +13,8 @@ expects = "^0.9.0"
 doublex = "^1.9.6.1"
 doublex-expects = "^0.7.1"
 streamlit-pydantic = { git = "https://github.com/LukasMasuch/streamlit-pydantic.git", rev = "9f84145b6b6e74cdff3a7815ab75b0464c4d4f24" }
+mypy = "^1.13.0"
+ruff = "^0.8.4"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.3.4"

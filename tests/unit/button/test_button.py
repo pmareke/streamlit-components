@@ -20,7 +20,7 @@ class TestButton:
 
         at = app.run()
 
-        expect(at.button[0].label).to(equal(label)))
+        expect(at.button[0].label).to(equal(label))
 
         at.button[0].click()
 
