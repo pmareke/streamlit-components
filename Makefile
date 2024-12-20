@@ -10,6 +10,10 @@ local-setup: ## Sets up the local environment (e.g. install git hooks)
 	scripts/local-setup.sh
 	make install
 
+.PHONY: up
+up: ## Run Streamlit app
+	 poetry run streamlit run main.py --server.port=8501 --server.address=0.0.0.0
+
 .PHONY: install
 install: ## Install the app packages
 	 rm -rf poetry.lock
