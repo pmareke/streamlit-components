@@ -1,5 +1,7 @@
 # Streamlit Components
 
+The app is deployed at [my-components.streamlit.app](my-components.streamlit.app).
+
 Current examples:
 
 - [Header page](./pages/header.py)
