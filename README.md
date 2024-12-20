@@ -2,12 +2,17 @@
 
 Current examples:
 
-- [X] [Header](./pages/header.py)
-- [X] [Link](./pages/link.py)
-- [X] [Button](./pages/button.py)
-- [X] [Form](./pages/form.py)
+- [Header page](./pages/header.py)
+  - [Header Component](./src/header/main.py)
+- [Link page](./pages/link.py)
+  - [Link Component](./src/link/main.py)
+- [Button page](./pages/button.py)
+  - [Button Component](./src/button/main.py)
+- [Form page](./pages/form.py)
+    - [Form Component](./src/form/main.py)
     - The component relies on the [streamlit-pydantic](https://github.com/lukasmasuch/streamlit-pydantic) library.
-- [X] [Tab](./pages/tab.py)
+- [Tab page](./pages/tab.py)
+  - [Tab Component](./src/tab/main.py) 
 
 Everything is in the `examples` folder and all the example rely on the `Component` class.
 
