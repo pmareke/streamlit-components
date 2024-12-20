@@ -1,8 +1,8 @@
 import streamlit as st
 
-from examples.component import Component
-from examples.header.main import Header
-from examples.link.main import Link
+from src.component import Component
+from src.header.main import Header
+from src.link.main import Link
 
 
 class App(Component):

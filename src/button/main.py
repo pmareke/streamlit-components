@@ -2,7 +2,7 @@ from collections.abc import Callable
 
 import streamlit as st
 
-from examples.component import Component
+from src.component import Component
 
 
 class Button(Component):
@@ -11,8 +11,8 @@ class Button(Component):
         self.callback = callback
 
     def render(self) -> None:
-        button = st.button(self.label)
-        if button:
+        _button = st.button(self.label)
+        if _button:
             self.callback()
 
 

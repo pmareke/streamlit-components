@@ -1,6 +1,6 @@
 import streamlit as st
 
-from examples.component import Component
+from src.component import Component
 
 
 class Tab(Component):
@@ -13,8 +13,8 @@ class Tab(Component):
     def render(self) -> None:
         tabs = st.tabs(list(self.items.keys()))
 
-        for index, tab in enumerate(tabs):
-            with tab:
+        for index, _tab in enumerate(tabs):
+            with _tab:
                 components = list(self.items.values())
                 components[index].render()
 

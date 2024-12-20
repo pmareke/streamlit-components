@@ -10,7 +10,7 @@ class TestButton:
         callback = Spy()
 
         def create_app(label, callback) -> None:  # type: ignore
-            from examples.button.main import Button
+            from src.button.main import Button
 
             internal_app = Button(label, callback.call)
 

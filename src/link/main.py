@@ -1,6 +1,6 @@
 import streamlit as st
 
-from examples.component import Component
+from src.component import Component
 
 
 class Link(Component):

@@ -4,7 +4,7 @@ from streamlit.testing.v1 import AppTest
 
 class TestTabComponent:
     def test_tab(self) -> None:
-        app = AppTest.from_file("examples/tab/main.py")
+        app = AppTest.from_file("src/tab/main.py")
 
         at = app.run()
 

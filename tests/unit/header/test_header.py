@@ -4,7 +4,7 @@ from streamlit.testing.v1 import AppTest
 
 class TestHeaderComponent:
     def test_header(self) -> None:
-        app = AppTest.from_file("examples/header/main.py")
+        app = AppTest.from_file("src/header/main.py")
 
         at = app.run()
 

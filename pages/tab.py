@@ -1,10 +1,10 @@
 import streamlit as st
 
-from examples.button.main import Button
-from examples.component import Component
-from examples.header.main import Header
-from examples.link.main import Link
-from examples.tab.main import Tab
+from src.button.main import Button
+from src.component import Component
+from src.header.main import Header
+from src.link.main import Link
+from src.tab.main import Tab
 
 
 class Page(Component):

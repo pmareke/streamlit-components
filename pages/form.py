@@ -1,10 +1,10 @@
 import streamlit as st
 from pydantic import BaseModel
 
-from examples.component import Component
-from examples.form.main import Form
-from examples.header.main import Header
-from examples.link.main import Link
+from src.component import Component
+from src.form.main import Form
+from src.header.main import Header
+from src.link.main import Link
 
 
 class ExampleModel(BaseModel):  # type: ignore

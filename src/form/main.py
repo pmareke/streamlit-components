@@ -4,7 +4,7 @@ import streamlit as st
 import streamlit_pydantic as sp
 from pydantic import BaseModel
 
-from examples.component import Component
+from src.component import Component
 
 
 class Form(Component):

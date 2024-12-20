@@ -15,7 +15,7 @@ class TestForm:
         callback = Spy()
 
         def create_app(callback, model) -> None:  # type: ignore
-            from examples.form.main import Form
+            from src.form.main import Form
 
             internal_app = Form(callback.call, model)
 
