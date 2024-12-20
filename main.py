@@ -20,6 +20,7 @@ class App(Component):
         Link.render("/link", "Link")
         Link.render("/form", "Form")
         Link.render("/tab", "Tab")
+        Link.render("/table", "Table")
 
 
 if __name__ == "__main__":

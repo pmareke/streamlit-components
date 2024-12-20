@@ -18,6 +18,11 @@ Current examples:
 - [Tab page](./pages/tab.py)
   - [Tab Component](./src/tab/main.py) 
 
+Work in progress:
+
+- [Table page](./pages/table.py)
+  - [Table Component](./src/table/main.py) 
+
 Everything is in the `examples` folder and all the example rely on the `Component` class.
 
 ## `Component` class
