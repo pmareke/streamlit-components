@@ -15,6 +15,7 @@ class App(Component):
         st.divider()
 
         Link.render("/header", "Header")
+        Link.render("/title", "Title")
         Link.render("/button", "Button")
         Link.render("/link", "Link")
         Link.render("/form", "Form")

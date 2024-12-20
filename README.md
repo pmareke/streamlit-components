@@ -6,6 +6,8 @@ Current examples:
 
 - [Header page](./pages/header.py)
   - [Header Component](./src/header/main.py)
+- [Title page](./pages/title.py)
+  - [Title Component](./src/title/main.py)
 - [Link page](./pages/link.py)
   - [Link Component](./src/link/main.py)
 - [Button page](./pages/button.py)
