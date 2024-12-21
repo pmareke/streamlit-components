@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 from pandas import DataFrame
 
+from src.button.main import Button
 from src.component import Component
 from src.header.main import Header
 from src.link.main import Link
@@ -24,15 +25,16 @@ class Page(Component):
         header = Header()
         header.render("Table Example")
 
-        button = st.button("Fill table")
-        data: DataFrame | None = None
-        if button:
-            data = self.repository.data()
+        button = Button("Fill table", lambda: self._get_data())
+        button.render()
 
         table = Table()
-        table.render(data)
+        table.render(self.data)
 
         Link.go_home()
+
+    def _get_data(self) -> None:
+        self.data = self.repository.data()
 
 
 if __name__ == "__main__":
