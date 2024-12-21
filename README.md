@@ -1,6 +1,6 @@
 # Streamlit Components
 
-The app is deployed at [my-components.streamlit.app](my-components.streamlit.app).
+The app is deployed at [my-components.streamlit.app](https://www.my-components.streamlit.app).
 
 Current examples:
 
