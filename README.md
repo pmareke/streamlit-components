@@ -17,9 +17,6 @@ Current examples:
     - The component relies on the [streamlit-pydantic](https://github.com/lukasmasuch/streamlit-pydantic) library.
 - [Tab page](./pages/tab.py)
   - [Tab Component](./src/tab/main.py) 
-
-Work in progress:
-
 - [Table page](./pages/table.py)
   - [Table Component](./src/table/main.py) 
 
