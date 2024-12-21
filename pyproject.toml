@@ -10,6 +10,7 @@ readme = "README.md"
 python = "^3.12"
 streamlit = "^1.41.1"
 streamlit-pydantic = { git = "https://github.com/LukasMasuch/streamlit-pydantic.git", rev = "9f84145b6b6e74cdff3a7815ab75b0464c4d4f24" }
+pandas = "^2.2.3"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.3.4"
