@@ -1,8 +1,10 @@
 import streamlit as st
 
+from src.code.main import Code
 from src.component import Component
 from src.header.main import Header
 from src.link.main import Link
+from src.tab.main import Tab
 from src.title.main import Title
 
 
@@ -11,15 +13,15 @@ class Page(Component):
         st.set_page_config("Title example")
 
     def render(self) -> None:
-        header = Header()
-        header.render("Title Example")
+        header = Header("Title Example")
+        header.render()
 
-        title = Title()
-        title.render("Title Example")
-
-        st.divider()
-
-        title.render("Another title Example")
+        tab = Tab()
+        title = Title("Title Example")
+        tab.add("Title", title)
+        code = Code(language="python", content='Title("Title Example")')
+        tab.add("Source code", code)
+        tab.render()
 
         Link.go_home()
 

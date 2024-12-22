@@ -1,6 +1,7 @@
 import streamlit as st
 
 from src.button.main import Button
+from src.code.main import Code
 from src.component import Component
 from src.header.main import Header
 from src.link.main import Link
@@ -12,18 +13,23 @@ class Page(Component):
         st.set_page_config("Tab example")
 
     def render(self) -> None:
-        header = Header()
-        header.render("Tab Example")
+        header = Header("Tab Example")
+        header.render()
 
         tab = Tab()
         button1 = Button(
             "Click button 1 !!!", callback=lambda: st.write("Button 1 clicked!!!")
         )
         tab.add("Button 1", button1)
-        button2 = Button(
-            "Click button 2 !!!", callback=lambda: st.write("Button 2 clicked!!!")
-        )
-        tab.add("Button 2", button2)
+        lines = [
+            "tab = Tab()",
+            'button1 = Button(\n  "Click button 1 !!!",\n  callback=lambda: st.write("Button 1 clicked!!!")\n)',
+            'tab.add("Button 1", button1)',
+            "tab.render()",
+        ]
+        content = "\n".join(lines)
+        code = Code(language="python", content=content)
+        tab.add("Source code", code)
         tab.render()
 
         Link.go_home()

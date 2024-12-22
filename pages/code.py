@@ -9,17 +9,21 @@ from src.tab.main import Tab
 
 class Page(Component):
     def __init__(self) -> None:
-        st.set_page_config("Header example")
+        st.set_page_config("Code example")
 
     def render(self) -> None:
-        header = Header("Header Example")
+        header = Header("Code Example")
         header.render()
 
         tab = Tab()
-        header = Header("Header Example")
-        tab.add("Header", header)
-        code = Code(language="python", content='Header("Header Example")')
+        code = Code(language="python", content="print('Hello, World!')")
+        tab.add("Code", code)
+        code = Code(
+            language="python",
+            content='Code(language="python", content="print(\'Hello, World!\')")',
+        )
         tab.add("Source code", code)
+
         tab.render()
 
         Link.go_home()

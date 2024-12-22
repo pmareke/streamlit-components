@@ -3,9 +3,11 @@ import streamlit as st
 from pandas import DataFrame
 
 from src.button.main import Button
+from src.code.main import Code
 from src.component import Component
 from src.header.main import Header
 from src.link.main import Link
+from src.tab.main import Tab
 from src.table.main import Table
 
 
@@ -22,15 +24,42 @@ class Page(Component):
         self.data = None
 
     def render(self) -> None:
-        header = Header()
-        header.render("Table Example")
+        header = Header("Table Example")
+        header.render()
 
-        button = Button("Fill table", lambda: self._get_data())
-        button.render()
+        tab = Tab()
 
-        table = Table()
-        table.render(self.data)
+        class TablePage(Component):
+            def __init__(self, repository: DummyRepository) -> None:
+                self.repository = repository
+                self.data = None
 
+            def render(self) -> None:
+                button = Button("Get data", lambda: self._get_data())
+                button.render()
+                table = Table()
+                table.render(pd.DataFrame(self.data))
+
+            def _get_data(self) -> None:
+                self.data = self.repository.data()
+
+        table_page = TablePage(self.repository)
+        tab.add("Table", table_page)
+        lines = [
+            "data = None",
+            "",
+            "def get_data(self) -> None:\n  data = self.repository.data()",
+            "",
+            'button = Button("Get data", lambda: get_data())',
+            "button.render()",
+            "table = Table()",
+            "table.render(pd.DataFrame(data))",
+        ]
+        content = "\n".join(lines)
+        code = Code(language="python", content=content)
+        tab.add("Source code", code)
+
+        tab.render()
         Link.go_home()
 
     def _get_data(self) -> None:

@@ -19,6 +19,8 @@ Current examples:
   - [Tab Component](./src/tab/main.py) 
 - [Table page](./pages/table.py)
   - [Table Component](./src/table/main.py) 
+- [Code page](./pages/code.py)
+  - [Code Component](./src/code/main.py) 
 
 Everything is in the `examples` folder and all the example rely on the `Component` class.
 

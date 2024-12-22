@@ -4,11 +4,14 @@ from src.component import Component
 
 
 class Link(Component):
-    @staticmethod
-    def render(url: str, label: str) -> None:
+    def __init__(self, url: str, label: str) -> None:
+        self.url = url
+        self.label = label
+
+    def render(self) -> None:
         st.html(f"""
-                    <a href='{url}' target='_self'>
-                        <h2>{label}</h1>
+                    <a href='{self.url}' target='_self'>
+                        <h2>{self.label}</h1>
                     </a>
                 """)
 
@@ -45,5 +48,5 @@ class Link(Component):
 
 
 if __name__ == "__main__":
-    link = Link()
-    link.render("any-url", "any-label")
+    link = Link("any-url", "any-label")
+    link.render()
