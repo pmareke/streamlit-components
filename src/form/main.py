@@ -15,7 +15,7 @@ class Form(Component):
     def render(self) -> None:
         data = sp.pydantic_form(key=__name__, model=self.model)  # type: ignore
         if data:
-            self.callback(data)
+            self.callback(data.model_dump())
 
 
 if __name__ == "__main__":

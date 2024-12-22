@@ -1,5 +1,5 @@
 from doublex import Spy
-from doublex_expects import have_been_called
+from doublex_expects import have_been_called_with
 from expects import equal, expect
 from pydantic import BaseModel
 from streamlit.testing.v1 import AppTest
@@ -32,4 +32,4 @@ class TestForm:
 
         app.run()
 
-        expect(callback.call).to(have_been_called)
+        expect(callback.call).to(have_been_called_with({"name": "", "age": 0}))
