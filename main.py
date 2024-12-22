@@ -17,6 +17,9 @@ class App(Component):
         header_page_link = Link("/header", "Header")
         header_page_link.render()
 
+        divider_page_link = Link("/divider", "Divider")
+        divider_page_link.render()
+
         title_page_link = Link("/title", "Title")
         title_page_link.render()
 

@@ -3,6 +3,7 @@ from pydantic import BaseModel
 
 from src.code.main import Code
 from src.component import Component
+from src.divider.main import Divider
 from src.form.main import Form
 from src.header.main import Header
 from src.link.main import Link
@@ -39,6 +40,8 @@ class Page(Component):
 
         tab.add("Source code", code)
         tab.render()
+
+        Divider.render()
 
         Link.go_home()
 

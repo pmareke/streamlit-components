@@ -5,6 +5,7 @@ from pandas import DataFrame
 from src.button.main import Button
 from src.code.main import Code
 from src.component import Component
+from src.divider.main import Divider
 from src.header.main import Header
 from src.link.main import Link
 from src.tab.main import Tab
@@ -58,8 +59,10 @@ class Page(Component):
         content = "\n".join(lines)
         code = Code(language="python", content=content)
         tab.add("Source code", code)
-
         tab.render()
+
+        Divider.render()
+
         Link.go_home()
 
     def _get_data(self) -> None:
