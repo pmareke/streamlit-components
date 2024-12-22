@@ -15,7 +15,7 @@ class Form(Component):
     def render(self) -> None:
         data = sp.pydantic_form(key=__name__, model=self.model)  # type: ignore
         if data:
-            self.callback()
+            self.callback(data)
 
 
 if __name__ == "__main__":
@@ -24,5 +24,5 @@ if __name__ == "__main__":
         name: str
         age: int
 
-    form = Form(callback=lambda: st.write("Form submitted"), model=MyModel)
+    form = Form(callback=lambda _: st.write("Form submitted"), model=MyModel)
     form.render()

@@ -32,7 +32,7 @@ class Page(Component):
             "  some_number: int",
             "  some_boolean: bool",
             "",
-            "Form(lamda: st.write('Form submitted'), ExampleModel)",
+            "Form(lambda data: st.json(data), ExampleModel)",
         ]
         content = "\n".join(lines)
         code = Code(language="python", content=content)
@@ -42,8 +42,8 @@ class Page(Component):
 
         Link.go_home()
 
-    def _callback(self) -> None:
-        st.write("Form submitted")
+    def _callback(self, data: dict) -> None:
+        st.json(data)
 
 
 if __name__ == "__main__":
