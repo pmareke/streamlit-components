@@ -24,6 +24,13 @@ Current examples:
 - [Code page](./pages/code.py)
   - [Code Component](./src/code/main.py) 
 
+Work in progress:
+
+- [ ] Error Alerts
+- [ ] Success Alerts
+- [ ] Columns
+- [ ] Grid
+
 Everything is in the `examples` folder and all the example rely on the `Component` class.
 
 ## `Component` class
