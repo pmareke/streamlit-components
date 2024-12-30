@@ -13,7 +13,7 @@ class Form(Component):
         self.model = model
 
     def render(self) -> None:
-        data = sp.pydantic_form(key=__name__, model=self.model)  # type: ignore
+        data = sp.pydantic_form(key=__name__, model=self.model)
         if data:
             self.callback(data.model_dump())
 
