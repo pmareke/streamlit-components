@@ -5,6 +5,7 @@ description = "Just a collection of Streamlit components using the best code pra
 authors = ["Pedro López Mareque <pedro.lopez.mareque@gmail.com>"]
 license = "MIT"
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
