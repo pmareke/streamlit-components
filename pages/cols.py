@@ -7,7 +7,7 @@ from src.link.main import Link
 from src.title.main import Title
 
 
-class Page(Component):
+class ColsPage(Component):
     def __init__(self) -> None:
         st.set_page_config("Cols example")
 
@@ -26,10 +26,7 @@ class Page(Component):
 
         Link.go_home()
 
-    def _callback(self, data: dict) -> None:
-        st.json(data)
-
 
 if __name__ == "__main__":
-    page = Page()
+    page = ColsPage()
     page.render()
