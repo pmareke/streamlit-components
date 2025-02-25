@@ -1,6 +1,6 @@
 # Streamlit Components
 
-The app is deployed at [my-components.streamlit.app](https://clean-components.streamlit.app).
+The app is deployed at [https://clean-components.streamlit.app](https://clean-components.streamlit.app).
 
 Current examples:
 
@@ -10,10 +10,10 @@ Current examples:
   - [Divider Component](./src/divider/main.py)
 - [Title page](./pages/title.py)
   - [Title Component](./src/title/main.py)
-- [Link page](./pages/link.py)
-  - [Link Component](./src/link/main.py)
 - [Button page](./pages/button.py)
   - [Button Component](./src/button/main.py)
+- [Link page](./pages/link.py)
+  - [Link Component](./src/link/main.py)
 - [Form page](./pages/form.py)
     - [Form Component](./src/form/main.py)
     - The component relies on the [streamlit-pydantic](https://github.com/lukasmasuch/streamlit-pydantic) library.
@@ -23,6 +23,8 @@ Current examples:
   - [Table Component](./src/table/main.py) 
 - [Code page](./pages/code.py)
   - [Code Component](./src/code/main.py) 
+- [Cols](./pages/cols.py)
+  - [Cols Component](./src/cols/main.py) 
 
 Work in progress:
 

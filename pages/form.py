@@ -27,16 +27,7 @@ class Page(Component):
         form = Form(self._callback, ExampleModel)
         tab = Tab()
         tab.add("Form", form)
-        lines = [
-            "class ExampleModel(BaseModel):",
-            "  some_text: str",
-            "  some_number: int",
-            "  some_boolean: bool",
-            "",
-            "Form(lambda data: st.json(data), ExampleModel)",
-        ]
-        content = "\n".join(lines)
-        code = Code(language="python", content=content)
+        code = Code(language="python", content=self._content)
 
         tab.add("Source code", code)
         tab.render()
@@ -47,6 +38,18 @@ class Page(Component):
 
     def _callback(self, data: dict) -> None:
         st.json(data)
+
+    @property
+    def _content(self) -> str:
+        lines = [
+            "class ExampleModel(BaseModel):",
+            "  some_text: str",
+            "  some_number: int",
+            "  some_boolean: bool",
+            "",
+            "Form(lambda data: st.json(data), ExampleModel)",
+        ]
+        return "\n".join(lines)
 
 
 if __name__ == "__main__":
