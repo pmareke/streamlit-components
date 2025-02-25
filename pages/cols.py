@@ -54,7 +54,7 @@ class ColsPage(Component):
             'extra_title = Title("Title 3")',
             "cols.add(extra_title)",
             "\n",
-            "cols.add(extra_title)",
+            "cols.render()",
         ]
         return "\n".join(lines)
 
