@@ -41,6 +41,9 @@ class App(Component):
         code_page_link = Link("/code", "Code")
         code_page_link.render()
 
+        cols_page_link = Link("/cols", "Cols")
+        cols_page_link.render()
+
 
 if __name__ == "__main__":
     app = App()
