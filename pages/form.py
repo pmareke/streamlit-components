@@ -16,7 +16,7 @@ class ExampleModel(BaseModel):  # type: ignore
     some_boolean: bool
 
 
-class Page(Component):
+class FormPage(Component):
     def __init__(self) -> None:
         st.set_page_config("Form example")
 
@@ -53,5 +53,5 @@ class Page(Component):
 
 
 if __name__ == "__main__":
-    page = Page()
+    page = FormPage()
     page.render()
