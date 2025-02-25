@@ -29,6 +29,19 @@ class ColsPage(Component):
         cols.add(extra_title)
 
         tab.add("Cols", cols)
+        code = Code(
+            language="python",
+            content=self._content,
+        )
+        tab.add("Source code", code)
+        tab.render()
+
+        divider.render()
+
+        Link.go_home()
+
+    @property
+    def _content(self) -> str:
         lines = [
             "cols = Cols()",
             "\n",
@@ -43,17 +56,7 @@ class ColsPage(Component):
             "\n",
             "cols.add(extra_title)",
         ]
-        content = "\n".join(lines)
-        code = Code(
-            language="python",
-            content=content,
-        )
-        tab.add("Source code", code)
-        tab.render()
-
-        divider.render()
-
-        Link.go_home()
+        return "\n".join(lines)
 
 
 if __name__ == "__main__":
